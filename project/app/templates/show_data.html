@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+
+
+{% block title %}
+    <title>Registeration</title>
+{% endblock title %}
+
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/show_data.css' %}">
+{% endblock css %}
+
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Video</th>
+            <th>Audio</th>
+            <th>File</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr>
+            <td><img src="{{i.Image.url}}" alt="image" height="120"></td>
+            <td><video src="{{i.Video.url}}" height="120" controls></video></td>
+            <td><audio src="{{i.Audio.url}}" controls></audio></td>
+            <td><img src="{{i.File.url}}" alt="File" height="120"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

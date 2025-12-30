@@ -1,0 +1,83 @@
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+input[type="file"],
+input[type="image"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #007bff;
+    border-radius: 8px;
+    background: #f8f9fa;
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]:hover,
+input[type="image"]:hover {
+    border-color: #0056b3;
+    background: #e9ecef;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: #0056b3;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+}
+
+@media (max-width: 768px) {
+    form {
+        margin: 20px 15px;
+        padding: 1.5rem;
+    }
+    
+    input[type="file"],
+    button[type="submit"] {
+        font-size: 16px;
+    }
+}

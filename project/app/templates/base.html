@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Cloudinary for dynamic</title>
+    {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    {% block css %}
+    {% endblock css %}
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <span class="logo">Dynamic Cloudinary</span>
+            <li><a href="{% url 'index' %}">Register</a></li>
+            <li><a href="{% url 'show_data' %}">Show Data</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
